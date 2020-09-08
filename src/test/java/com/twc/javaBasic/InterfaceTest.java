@@ -18,11 +18,12 @@ class InterfaceTest {
         //  Please write down your answer directly.
         //
         // <--start
-        final String expected = "";
+        final String expected = "The truth of the universe is 42";
         // --end-->
 
         assertEquals(expected, instance.tellMeTheTruthOfTheUniverse());
     }
+
 
     @Test
     void should_choose_override_method() {
@@ -31,8 +32,9 @@ class InterfaceTest {
         // TODO:
         //  Please write down your answer directly.
         //
+
         // <--start
-        final String expected = "";
+        final String expected = "The truth of the universe is Anime";
         // --end-->
 
         assertEquals(expected, instance.tellMeTheTruthOfTheUniverse());
@@ -46,7 +48,7 @@ class InterfaceTest {
         //  Please write down your answer directly.
         //
         // <--start
-        final String expected = "";
+        final String expected = "The truth of the universe is Game";
         // --end-->
 
         assertEquals(expected, instance.tellMeTheTruthOfTheUniverse());
@@ -60,4 +62,6 @@ class InterfaceTest {
 
         assertEquals("Person", name);
     }
+
+
 }
