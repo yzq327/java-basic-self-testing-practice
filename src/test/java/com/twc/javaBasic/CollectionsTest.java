@@ -2,12 +2,10 @@ package com.twc.javaBasic;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
+
+
+
 
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
@@ -22,6 +20,7 @@ class CollectionsTest {
         Iterator<String> iterator = collection.iterator();
 
         // Hint: You should implement createList() in this class.
+
         assertIterableEquals(Arrays.asList("Hello", "World", "!"), createList(iterator));
     }
 
@@ -35,7 +34,9 @@ class CollectionsTest {
         //  No `for` is allowed.
         //
         // <--start
-
+        while (iterator.hasNext()){//判断是否存在下一个元素
+            list.add(iterator.next());
+        }
         // --end-->
 
         return list;
@@ -46,13 +47,11 @@ class CollectionsTest {
     @Test
     void should_predict_linked_list_operation_result() {
         LinkedList<String> staff = new LinkedList<>();
-
         staff.add("Amy");
         staff.add("Bob");
         staff.add("Carl");
-
         ListIterator<String> iterator = staff.listIterator();
-        iterator.next();
+        // iterator.next();
         iterator.add("Juliet");
         iterator.previous();
         iterator.remove();
@@ -61,7 +60,8 @@ class CollectionsTest {
         //  Please write your answer directly.
         //
         // <--start
-        final List<String> expected = null;
+        final List<String> expected = Arrays.asList("Amy","Bob","Carl");
+
         // --end-->
 
         assertIterableEquals(expected, staff);
@@ -74,16 +74,20 @@ class CollectionsTest {
             integers.add(i);
         }
 
-        List<Integer> subList = integers.subList(3, 10);
-        subList.clear();
+       // List<Integer> subList = integers.subList(3, 10);//取左不取右
+
+        //subList.clear();//将list集合中的所有对象都释放了，而且集合也都空了
+
 
         // TODO:
         //  Please write down your answer directly.
         //
         // <--start
-        final List<Integer> expected = null;
+        final List<Integer> expected = Arrays.asList(0,1,2,3,4,5,6,7,8,9,10,11);
         // --end-->
 
         assertIterableEquals(expected, integers);
     }
+
+
 }
