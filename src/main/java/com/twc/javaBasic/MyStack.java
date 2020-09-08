@@ -24,7 +24,11 @@ public class MyStack {
 
         // TODO: Please push the value into the storage here.
         // <--start
+        if(count<10) {
+            storage[count] = value;
+        }
 
+        count ++;
         // --end-->
     }
 
@@ -37,6 +41,8 @@ public class MyStack {
         //  IMPORTANT: You SHOULD NOT USE COLLECTIONS (such as List<T>) OTHER THAN ARRAY.
         //
         // <--start
+        int[] newArray=new int [newCapacity];
+        //  newArray  =
 
         // --end-->
     }
@@ -57,9 +63,9 @@ public class MyStack {
         //  Please pop one element from the array. You should update the `count` field
         //  as well.
         // <--start
+        count --;
+        return count;
 
-        // --end-->
-
-        throw new UnsupportedOperationException("Stack is empty.");
+        // throw new UnsupportedOperationException("Stack is empty.");
     }
 }
